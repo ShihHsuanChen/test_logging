@@ -51,9 +51,6 @@ class MyLogHandler:
         self.logger.addHandler(file_handler)
         self.logger.addHandler(console_handler)
 
-    def set_root_logger(**kwargs):
-        self._set_logger(self._root_name, **kwargs)
-
     def set_logger(self, name, **kwargs):
         _name = f'{self._root_name}.{name}'
         self._set_logger(_name, **kwargs)

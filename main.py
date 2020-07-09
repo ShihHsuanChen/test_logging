@@ -4,6 +4,7 @@ from loghandler import MyLogHandler
 from loghandler import loghandler as lh
 from module import foo, foo1, foo2
 from module import set_logger as module_set_logger
+from project import project_manage
 
 
 loghandler = MyLogHandler('main')
@@ -49,7 +50,13 @@ def run3():
     loghandler.logger.info('end')
 
     
+def run4():
+    loghandler.logger.info('run4')
+    project_manage()
+
+
 if __name__ == '__main__':
     # run()
-    run1()
+    # run1()
     # run2()
+    run4()
